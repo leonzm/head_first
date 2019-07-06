@@ -12,20 +12,18 @@ import com.company.chapter_03.Condiment;
  */
 public class Soy extends Condiment {
 
-    private Beverage beverage;
-
     public Soy(Beverage beverage) {
-        this.beverage = beverage;
+        super(beverage);
     }
 
     @Override
-    public String getDescription() {
-        return beverage.getDescription() + ", Soy";
+    public String getCondimentDescription() {
+        return "Soy";
     }
 
     @Override
-    public double cost() {
-        return 0.40 + beverage.cost();
+    public double getCondimentCost() {
+        return 0.40;
     }
 
 }

@@ -12,20 +12,18 @@ import com.company.chapter_03.Condiment;
  */
 public class Mocha extends Condiment {
 
-    private Beverage beverage;
-
     public Mocha(Beverage beverage) {
-        this.beverage = beverage;
+        super(beverage);
     }
 
     @Override
-    public String getDescription() {
-        return beverage.getDescription() + ", Mocha";
+    public String getCondimentDescription() {
+        return "Mocha";
     }
 
     @Override
-    public double cost() {
-        return 0.20 + beverage.cost();
+    public double getCondimentCost() {
+        return 0.20;
     }
 
 }

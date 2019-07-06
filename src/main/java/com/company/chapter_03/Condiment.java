@@ -9,6 +9,24 @@ package com.company.chapter_03;
  */
 public abstract class Condiment extends Beverage {
 
-    public abstract String getDescription();
+    private Beverage beverage;
+
+    public Condiment(Beverage beverage) {
+        this.beverage = beverage;
+    }
+
+    @Override
+    public String getDescription() {
+        return beverage.getDescription() + ", " + getCondimentDescription();
+    }
+
+    @Override
+    public double cost() {
+        return beverage.cost() + getCondimentCost();
+    }
+
+    public abstract String getCondimentDescription();
+
+    public abstract double getCondimentCost();
 
 }

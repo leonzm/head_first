@@ -12,20 +12,18 @@ import com.company.chapter_03.Condiment;
  */
 public class Whip extends Condiment {
 
-    private Beverage beverage;
-
     public Whip(Beverage beverage) {
-        this.beverage = beverage;
+        super(beverage);
     }
 
     @Override
-    public String getDescription() {
-        return beverage.getDescription() + ", Whip";
+    public String getCondimentDescription() {
+        return "Whip";
     }
 
     @Override
-    public double cost() {
-        return 0.30 + beverage.cost();
+    public double getCondimentCost() {
+        return 0.30;
     }
 
 }
